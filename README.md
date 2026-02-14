@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 4.Run the FastAPI server:
 ```bash
-python app/main.py
+python -m app/main.py
 ```
 
 5.Open the API docs in your browser:
@@ -49,7 +49,7 @@ docker build -t Deepfake_Images_Detection .
 
 3.Run the Docker container:
 ```bash
-docker run -p 8000:8000 Deepfake_Images_Detection
+docker run -p 8000:8000 -v "C:/Users/Asus/Desktop/weights:/app/weights" Deepfake_Images_Detection
 ```
 4.Access API docs:
 ```bash
