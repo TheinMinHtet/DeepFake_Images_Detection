@@ -99,7 +99,7 @@ The model achieved 97.9% training accuracy and 97.7% validation accuracy on trai
 =Validation accuracy: 97.7%
 
 ## Model Architecture
-The model combines a pretrained SigLIP image classifier with a custom ArtifactCNN using SRM layers to capture subtle noise artifacts. The outputs are fused for a final classification.
+The proposed architecture is a fusion-based deepfake detection model that combines a pretrained Hugging Face Transformers implementation of SigLIP (loaded from prithivMLmods/deepfake-detector-model-v1) with a custom SRM-enhanced CNN branch. SigLIP acts as the semantic backbone, where most of its parameters are frozen to preserve pretrained visual representations, and only the final classifier layer and the last transformer block (layers.11) are unfrozen for fine-tuning on the deepfake dataset. In parallel, a custom ArtifactCNN branch processes SRM-filtered noise maps to capture low-level manipulation artifacts. The embeddings from both branches are concatenated and passed through a fusion classifier (Linear → BatchNorm → ReLU → Dropout → Linear) to produce binary predictions (real vs fake). Training is performed using AdamW with different learning rates for each component (lower LR for SigLIP, higher LR for newly initialized layers), cross-entropy loss, early stopping with patience of 10 epochs, and the best model is saved based on validation loss.
 
 ## Future Enhancement
 Larger & More Diverse Dataset: Train on a broader range of deepfake sources, ethnicities, lighting conditions, and compression levels to improve generalization.
