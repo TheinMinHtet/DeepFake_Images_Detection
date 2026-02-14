@@ -73,7 +73,9 @@ If you want to know how to train this model more details you can check in this (
 
 ## Training Dataset
 If you want to check the training dataset you can check in this (https://huggingface.co/datasets/Thein777/real_fake_low_high_quality_images/tree/main)
+
 ---------------------------------------------------------------------------------------------------------------
+
 ## Model Description
 DeepFake_Images_Detection is a deep learning project where I trained a fusion PyTorch model for detecting deepfake images. The model uses SigLIP (prithivMLmods/deepfake-detector-model-v1) as a backbone and a custom ArtifactCNN with SRM layers to analyze subtle artifacts in both low- and high-quality images. It outputs whether an image is real or manipulated along with a confidence score.
 
@@ -89,8 +91,8 @@ Augmentation techniques such as face cutouts were applied to improve robustness.
 
 # Classification Evaluation
 The model achieved 97.9% training accuracy and 97.7% validation accuracy on training dataset and validation dataset, demonstrating strong performance and robustness for real-world detection.
--Training accuracy: 97.9%
--Validation accuracy: 97.7%
+=Training accuracy: 97.9%
+=Validation accuracy: 97.7%
 
 ## Model Architecture
 The model combines a pretrained SigLIP image classifier with a custom ArtifactCNN using SRM layers to capture subtle noise artifacts. The outputs are fused for a final classification.
