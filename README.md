@@ -84,9 +84,13 @@ Trained on specific datasets; results may vary on new data distributions.
 
 ## About Training Dataset
 Training and validation datasets included real and fake images at both low (LQ) and high quality (HQ).LQ:HQ - 2:1 Because i used Siglip as a backbone so it is already trained and seen too many high quality images.
+
 training data - HQ (real - 145 / fake - 145) | LQ (real - 290 / fake -290) Total = 870
+
 validation data - HQ (real - 29 / fake - 29) | LQ (real - 58 / fake -58) Total = 174
+
 TOTAL = 1044 images
+
 Augmentation techniques such as face cutouts were applied to improve robustness.
 
 # Classification Evaluation
