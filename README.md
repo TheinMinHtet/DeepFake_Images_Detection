@@ -1,13 +1,13 @@
-# PixelProof
-PixelProof is a Deepfake Detection website where you can check if a video or photo is real or if it has been tampered with. It’s built for anyone who wants to make sure what they are seeing online is the truth.
+# Deepfake_Images_Detection
+Deepfake_Images_Detection is a Deepfake Detection website where you can check if a video or photo is real or if it has been tampered with. It’s built for anyone who wants to make sure what they are seeing online is the truth.
 
 ## 🐍 Option 1: Run Locally with Python
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/TheinMinHtet/PixelProof
-cd deepfake_detection_web
+git clone https://github.com/TheinMinHtet/Deepfake_Images_Detection
+cd Deepfake_Images_Detection
 ```
 
 2 Create a virtual environment:
@@ -38,18 +38,18 @@ http://localhost:8000/docs
 
 1.Clone the repository:
 ```bash
-git clone https://github.com/TheinMinHtet/PixelProof
-cd deepfake_detection_web
+git clone https://github.com/TheinMinHtet/Deepfake_Images_Detection
+cd Deepfake_Images_Detection
 ```
 
 2.Build the Docker image:
 ```bash
-docker build -t deepfake_detection_web .
+docker build -t Deepfake_Images_Detection .
 ```
 
 3.Run the Docker container:
 ```bash
-docker run -p 8000:8000 deepfake_detection_web
+docker run -p 8000:8000 Deepfake_Images_Detection
 ```
 4.Access API docs:
 ```bash
